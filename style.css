@@ -1,0 +1,307 @@
+* {
+    font-family: "Montserrat";
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*.html,body{
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 48px;
+    margin: 0 0 16px 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+
+p {
+    color: #979797;
+    margin: 0 0 16px 0;
+    font-size: 24px;
+}
+
+section{
+    padding: 64px 128px;
+}
+
+img, iframe{
+    width: 100%;
+}
+
+.btn {
+    background-color: #FFC108;
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    box-shadow: 3px 2px 2px #FFC108;
+
+}
+
+.btn-alt {
+    background-color: white;
+    color: black;
+    margin-right: 16px;
+    border: 2px solid #FFC108;
+}
+
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 128px;
+    background-color: white;
+    position: sticky;
+    top: 0;
+}
+
+#header h1{
+    margin: 0;
+}
+
+#landing{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 15px;
+}
+
+#landing p{
+    margin-bottom: 32px;
+}
+
+#landing > div{
+    width: 50%;
+}
+
+.nav > a{
+    margin-left: 12px
+}
+
+#about{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#about > div{
+    width: 50%;
+}
+
+#about-stat{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    text-align: center;
+    margin-top: 70px;
+}
+
+.about-stat-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}   
+
+.about-stat-item div{
+    width: 50px;
+    height: 10px;
+    background-color: #FFC108;
+    margin-bottom: 20px;
+}
+
+
+.service-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+div > a{
+    background-color: #FFC108;
+    color: white;
+    padding: 5px 5px;  
+    box-shadow: 3px 2px 2px #FFC108; 
+}
+
+.element{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 130px;
+    margin-top: 30px;
+}
+
+.element-detail{
+    box-shadow: 3px 4px 4px #979797;
+}
+
+.element-detail img{
+    width: 100%;
+}
+
+.element-detail h2{
+    padding: 15px;
+}
+
+.element-detail p{
+font-size: 20px;
+text-align: justify;
+padding: 15px;
+}
+
+.contact-header{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    column-gap: 130px;
+}
+
+.contact-header > div, .contact-header > form{
+    width: 50%;
+}
+
+.form-group{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 32px;
+    margin-top: 32px;
+    grid-template-areas:    "Name Subject"
+                            "Email Phone"
+                            "Message Message";
+}
+
+#input-Name{
+       grid-area: Name; 
+}
+
+#input-Subject{
+    grid-area: Subject; 
+}
+
+#input-Email{
+    grid-area: Email; 
+}
+
+#input-Phone{
+    grid-area: Phone; 
+}
+
+#input-Message{
+    grid-area: Message; 
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 28px;
+}
+
+.input-group label{
+    font-weight: 800;
+    margin-bottom: 18px;
+    font-size: 22px;
+}
+
+.input-group input{
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #979797;
+}
+
+form{
+    border: 4px solid #FFC108;
+    box-shadow: 3px 4px 4px #FFC108;
+    padding: 20px;
+}
+
+form h1{
+    font-size: 30px;
+    text-align: center;
+}
+
+footer{
+    background-color: #FFC108;
+    color: white;
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+
+}
+
+footer p{
+    color: white;
+    width: 60%;
+}
+
+.social-icon{
+    display: flex;
+    gap: 32px;
+}
+
+@media only screen and(max-width: 1200px) {
+    .element-detail{
+        gap: 20px;
+    }
+
+    .contact-header{
+        gap: 24px;
+    }
+
+    .form-group{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 980px) {
+    #header,#footer{
+        padding: 10px 30px;
+
+    }
+
+    section{
+        padding: 64px 32px;
+    }
+
+    #landing{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #landing > div{
+        width: 100%;
+    }
+
+    #about{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    #about > div{
+        width: 100%;
+    }
+
+    #element-detail{
+        gap: 10x;
+    }
+
+    .contact-header{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 60px;
+    }
+
+    .contact-header > form, .contact-header > div{
+        width: 100%;
+    }
+
+}
+
